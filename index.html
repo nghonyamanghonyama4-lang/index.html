@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Exchange - Clothing Brand</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    button {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>The Exchange</h1>
+  <p>Founded by Ntokoto Nghonyama</p>
+</header>
+
+<div class="container">
+  <div class="product">
+    <h2>Exquisite T-Shirt</h2>
+    <p>Price: R250</p>
+    <p>Sizes: Small, Medium, Large</p>
+    <p>Colors: Black, White</p>
+    <button onclick="orderNow()">Order Now</button>
+  </div>
+</div>
+
+<footer>
+  <p>Contact: 069 357 7360</p>
+</footer>
+
+<script>
+function orderNow() {
+  const phone = "27693577360";
+  const message = encodeURIComponent("Hello, I want to order a T-shirt from The Exchange.");
+  window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+}
+</script>
+
+</body>
+</html>
